@@ -1,0 +1,260 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel find_me_ids print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN find_me_id_fieldheadercolumn}
+<th class="runner-cc {$find_me_id_class}" {$find_me_id_style}>
+	{BEGIN find_me_id_fieldheader}
+	<b>{$label find_me_ids find_me_id}</b>
+	{END find_me_id_fieldheader}
+</th>
+{END find_me_id_fieldheadercolumn}
+	{BEGIN lat_fieldheadercolumn}
+<th class="runner-cc {$lat_class}" {$lat_style}>
+	{BEGIN lat_fieldheader}
+	<b>{$label find_me_ids lat}</b>
+	{END lat_fieldheader}
+</th>
+{END lat_fieldheadercolumn}
+	{BEGIN google_name_fieldheadercolumn}
+<th class="runner-cc {$google_name_class}" {$google_name_style}>
+	{BEGIN google_name_fieldheader}
+	<b>{$label find_me_ids google_name}</b>
+	{END google_name_fieldheader}
+</th>
+{END google_name_fieldheadercolumn}
+	{BEGIN custom_address_1_fieldheadercolumn}
+<th class="runner-cc {$custom_address_1_class}" {$custom_address_1_style}>
+	{BEGIN custom_address_1_fieldheader}
+	<b>{$label find_me_ids custom_address_1}</b>
+	{END custom_address_1_fieldheader}
+</th>
+{END custom_address_1_fieldheadercolumn}
+	{BEGIN custom_address_2_fieldheadercolumn}
+<th class="runner-cc {$custom_address_2_class}" {$custom_address_2_style}>
+	{BEGIN custom_address_2_fieldheader}
+	<b>{$label find_me_ids custom_address_2}</b>
+	{END custom_address_2_fieldheader}
+</th>
+{END custom_address_2_fieldheadercolumn}
+	{BEGIN created_at_fieldheadercolumn}
+<th class="runner-cc {$created_at_class}" {$created_at_style}>
+	{BEGIN created_at_fieldheader}
+	<b>{$label find_me_ids created_at}</b>
+	{END created_at_fieldheader}
+</th>
+{END created_at_fieldheadercolumn}
+	{BEGIN updated_at_fieldheadercolumn}
+<th class="runner-cc {$updated_at_class}" {$updated_at_style}>
+	{BEGIN updated_at_fieldheader}
+	<b>{$label find_me_ids updated_at}</b>
+	{END updated_at_fieldheader}
+</th>
+{END updated_at_fieldheadercolumn}
+	{BEGIN lng_fieldheadercolumn}
+<th class="runner-cc {$lng_class}" {$lng_style}>
+	{BEGIN lng_fieldheader}
+	<b>{$label find_me_ids lng}</b>
+	{END lng_fieldheader}
+</th>
+{END lng_fieldheadercolumn}
+	{BEGIN identifier_fieldheadercolumn}
+<th class="runner-cc {$identifier_class}" {$identifier_style}>
+	{BEGIN identifier_fieldheader}
+	<b>{$label find_me_ids identifier}</b>
+	{END identifier_fieldheader}
+</th>
+{END identifier_fieldheadercolumn}
+	{BEGIN polling_station_code_fieldheadercolumn}
+<th class="runner-cc {$polling_station_code_class}" {$polling_station_code_style}>
+	{BEGIN polling_station_code_fieldheader}
+	<b>{$label find_me_ids polling_station_code}</b>
+	{END polling_station_code_fieldheader}
+</th>
+{END polling_station_code_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN find_me_id_fieldcolumn}
+<td  class="runner-cc {$find_me_id_class}" {$find_me_id_style} {$recordattrs}>
+	{$find_me_id_value}
+</td>
+{END find_me_id_fieldcolumn}
+	{BEGIN lat_fieldcolumn}
+<td  class="runner-cc {$lat_class}" {$lat_style} {$recordattrs}>
+	{$lat_value}
+</td>
+{END lat_fieldcolumn}
+	{BEGIN google_name_fieldcolumn}
+<td  class="runner-cc {$google_name_class}" {$google_name_style} {$recordattrs}>
+	{$google_name_value}
+</td>
+{END google_name_fieldcolumn}
+	{BEGIN custom_address_1_fieldcolumn}
+<td  class="runner-cc {$custom_address_1_class}" {$custom_address_1_style} {$recordattrs}>
+	{$custom_address_1_value}
+</td>
+{END custom_address_1_fieldcolumn}
+	{BEGIN custom_address_2_fieldcolumn}
+<td  class="runner-cc {$custom_address_2_class}" {$custom_address_2_style} {$recordattrs}>
+	{$custom_address_2_value}
+</td>
+{END custom_address_2_fieldcolumn}
+	{BEGIN created_at_fieldcolumn}
+<td  class="runner-cc {$created_at_class}" {$created_at_style} {$recordattrs}>
+	{$created_at_value}
+</td>
+{END created_at_fieldcolumn}
+	{BEGIN updated_at_fieldcolumn}
+<td  class="runner-cc {$updated_at_class}" {$updated_at_style} {$recordattrs}>
+	{$updated_at_value}
+</td>
+{END updated_at_fieldcolumn}
+	{BEGIN lng_fieldcolumn}
+<td  class="runner-cc {$lng_class}" {$lng_style} {$recordattrs}>
+	{$lng_value}
+</td>
+{END lng_fieldcolumn}
+	{BEGIN identifier_fieldcolumn}
+<td  class="runner-cc {$identifier_class}" {$identifier_style} {$recordattrs}>
+	{$identifier_value}
+</td>
+{END identifier_fieldcolumn}
+	{BEGIN polling_station_code_fieldcolumn}
+<td  class="runner-cc {$polling_station_code_class}" {$polling_station_code_style} {$recordattrs}>
+	{$polling_station_code_value}
+</td>
+{END polling_station_code_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

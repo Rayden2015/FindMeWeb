@@ -1,0 +1,284 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel polling_coordinates_map print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN polling_coordinates_map_id_fieldheadercolumn}
+<th class="runner-cc {$polling_coordinates_map_id_class}" {$polling_coordinates_map_id_style}>
+	{BEGIN polling_coordinates_map_id_fieldheader}
+	<b>{$label polling_coordinates_map polling_coordinates_map_id}</b>
+	{END polling_coordinates_map_id_fieldheader}
+</th>
+{END polling_coordinates_map_id_fieldheadercolumn}
+	{BEGIN find_me_code_fieldheadercolumn}
+<th class="runner-cc {$find_me_code_class}" {$find_me_code_style}>
+	{BEGIN find_me_code_fieldheader}
+	<b>{$label polling_coordinates_map find_me_code}</b>
+	{END find_me_code_fieldheader}
+</th>
+{END find_me_code_fieldheadercolumn}
+	{BEGIN town_id_fieldheadercolumn}
+<th class="runner-cc {$town_id_class}" {$town_id_style}>
+	{BEGIN town_id_fieldheader}
+	<b>{$label polling_coordinates_map town_id}</b>
+	{END town_id_fieldheader}
+</th>
+{END town_id_fieldheadercolumn}
+	{BEGIN point1_fieldheadercolumn}
+<th class="runner-cc {$point1_class}" {$point1_style}>
+	{BEGIN point1_fieldheader}
+	<b>{$label polling_coordinates_map point1}</b>
+	{END point1_fieldheader}
+</th>
+{END point1_fieldheadercolumn}
+	{BEGIN point2_fieldheadercolumn}
+<th class="runner-cc {$point2_class}" {$point2_style}>
+	{BEGIN point2_fieldheader}
+	<b>{$label polling_coordinates_map point2}</b>
+	{END point2_fieldheader}
+</th>
+{END point2_fieldheadercolumn}
+	{BEGIN point3_fieldheadercolumn}
+<th class="runner-cc {$point3_class}" {$point3_style}>
+	{BEGIN point3_fieldheader}
+	<b>{$label polling_coordinates_map point3}</b>
+	{END point3_fieldheader}
+</th>
+{END point3_fieldheadercolumn}
+	{BEGIN point4_fieldheadercolumn}
+<th class="runner-cc {$point4_class}" {$point4_style}>
+	{BEGIN point4_fieldheader}
+	<b>{$label polling_coordinates_map point4}</b>
+	{END point4_fieldheader}
+</th>
+{END point4_fieldheadercolumn}
+	{BEGIN point5_fieldheadercolumn}
+<th class="runner-cc {$point5_class}" {$point5_style}>
+	{BEGIN point5_fieldheader}
+	<b>{$label polling_coordinates_map point5}</b>
+	{END point5_fieldheader}
+</th>
+{END point5_fieldheadercolumn}
+	{BEGIN point6_fieldheadercolumn}
+<th class="runner-cc {$point6_class}" {$point6_style}>
+	{BEGIN point6_fieldheader}
+	<b>{$label polling_coordinates_map point6}</b>
+	{END point6_fieldheader}
+</th>
+{END point6_fieldheadercolumn}
+	{BEGIN polling_coordinates_id_fieldheadercolumn}
+<th class="runner-cc {$polling_coordinates_id_class}" {$polling_coordinates_id_style}>
+	{BEGIN polling_coordinates_id_fieldheader}
+	<b>{$label polling_coordinates_map polling_coordinates_id}</b>
+	{END polling_coordinates_id_fieldheader}
+</th>
+{END polling_coordinates_id_fieldheadercolumn}
+	{BEGIN created_at_fieldheadercolumn}
+<th class="runner-cc {$created_at_class}" {$created_at_style}>
+	{BEGIN created_at_fieldheader}
+	<b>{$label polling_coordinates_map created_at}</b>
+	{END created_at_fieldheader}
+</th>
+{END created_at_fieldheadercolumn}
+	{BEGIN updated_at_fieldheadercolumn}
+<th class="runner-cc {$updated_at_class}" {$updated_at_style}>
+	{BEGIN updated_at_fieldheader}
+	<b>{$label polling_coordinates_map updated_at}</b>
+	{END updated_at_fieldheader}
+</th>
+{END updated_at_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN polling_coordinates_map_id_fieldcolumn}
+<td  class="runner-cc {$polling_coordinates_map_id_class}" {$polling_coordinates_map_id_style} {$recordattrs}>
+	{$polling_coordinates_map_id_value}
+</td>
+{END polling_coordinates_map_id_fieldcolumn}
+	{BEGIN find_me_code_fieldcolumn}
+<td  class="runner-cc {$find_me_code_class}" {$find_me_code_style} {$recordattrs}>
+	{$find_me_code_value}
+</td>
+{END find_me_code_fieldcolumn}
+	{BEGIN town_id_fieldcolumn}
+<td  class="runner-cc {$town_id_class}" {$town_id_style} {$recordattrs}>
+	{$town_id_value}
+</td>
+{END town_id_fieldcolumn}
+	{BEGIN point1_fieldcolumn}
+<td  class="runner-cc {$point1_class}" {$point1_style} {$recordattrs}>
+	{$point1_value}
+</td>
+{END point1_fieldcolumn}
+	{BEGIN point2_fieldcolumn}
+<td  class="runner-cc {$point2_class}" {$point2_style} {$recordattrs}>
+	{$point2_value}
+</td>
+{END point2_fieldcolumn}
+	{BEGIN point3_fieldcolumn}
+<td  class="runner-cc {$point3_class}" {$point3_style} {$recordattrs}>
+	{$point3_value}
+</td>
+{END point3_fieldcolumn}
+	{BEGIN point4_fieldcolumn}
+<td  class="runner-cc {$point4_class}" {$point4_style} {$recordattrs}>
+	{$point4_value}
+</td>
+{END point4_fieldcolumn}
+	{BEGIN point5_fieldcolumn}
+<td  class="runner-cc {$point5_class}" {$point5_style} {$recordattrs}>
+	{$point5_value}
+</td>
+{END point5_fieldcolumn}
+	{BEGIN point6_fieldcolumn}
+<td  class="runner-cc {$point6_class}" {$point6_style} {$recordattrs}>
+	{$point6_value}
+</td>
+{END point6_fieldcolumn}
+	{BEGIN polling_coordinates_id_fieldcolumn}
+<td  class="runner-cc {$polling_coordinates_id_class}" {$polling_coordinates_id_style} {$recordattrs}>
+	{$polling_coordinates_id_value}
+</td>
+{END polling_coordinates_id_fieldcolumn}
+	{BEGIN created_at_fieldcolumn}
+<td  class="runner-cc {$created_at_class}" {$created_at_style} {$recordattrs}>
+	{$created_at_value}
+</td>
+{END created_at_fieldcolumn}
+	{BEGIN updated_at_fieldcolumn}
+<td  class="runner-cc {$updated_at_class}" {$updated_at_style} {$recordattrs}>
+	{$updated_at_value}
+</td>
+{END updated_at_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

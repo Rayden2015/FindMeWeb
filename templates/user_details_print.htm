@@ -1,0 +1,272 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel user_details print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN user_id_fieldheadercolumn}
+<th class="runner-cc {$user_id_class}" {$user_id_style}>
+	{BEGIN user_id_fieldheader}
+	<b>{$label user_details user_id}</b>
+	{END user_id_fieldheader}
+</th>
+{END user_id_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc {$email_class}" {$email_style}>
+	{BEGIN email_fieldheader}
+	<b>{$label user_details email}</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+	{BEGIN town_id_fieldheadercolumn}
+<th class="runner-cc {$town_id_class}" {$town_id_style}>
+	{BEGIN town_id_fieldheader}
+	<b>{$label user_details town_id}</b>
+	{END town_id_fieldheader}
+</th>
+{END town_id_fieldheadercolumn}
+	{BEGIN verified_fieldheadercolumn}
+<th class="runner-cc {$verified_class}" {$verified_style}>
+	{BEGIN verified_fieldheader}
+	<b>{$label user_details verified}</b>
+	{END verified_fieldheader}
+</th>
+{END verified_fieldheadercolumn}
+	{BEGIN verified_by_fieldheadercolumn}
+<th class="runner-cc {$verified_by_class}" {$verified_by_style}>
+	{BEGIN verified_by_fieldheader}
+	<b>{$label user_details verified_by}</b>
+	{END verified_by_fieldheader}
+</th>
+{END verified_by_fieldheadercolumn}
+	{BEGIN photo_fieldheadercolumn}
+<th class="runner-cc {$photo_class}" {$photo_style}>
+	{BEGIN photo_fieldheader}
+	<b>{$label user_details photo}</b>
+	{END photo_fieldheader}
+</th>
+{END photo_fieldheadercolumn}
+	{BEGIN latitude_fieldheadercolumn}
+<th class="runner-cc {$latitude_class}" {$latitude_style}>
+	{BEGIN latitude_fieldheader}
+	<b>{$label user_details latitude}</b>
+	{END latitude_fieldheader}
+</th>
+{END latitude_fieldheadercolumn}
+	{BEGIN longitude_fieldheadercolumn}
+<th class="runner-cc {$longitude_class}" {$longitude_style}>
+	{BEGIN longitude_fieldheader}
+	<b>{$label user_details longitude}</b>
+	{END longitude_fieldheader}
+</th>
+{END longitude_fieldheadercolumn}
+	{BEGIN find_me_code_fieldheadercolumn}
+<th class="runner-cc {$find_me_code_class}" {$find_me_code_style}>
+	{BEGIN find_me_code_fieldheader}
+	<b>{$label user_details find_me_code}</b>
+	{END find_me_code_fieldheader}
+</th>
+{END find_me_code_fieldheadercolumn}
+	{BEGIN created_at_fieldheadercolumn}
+<th class="runner-cc {$created_at_class}" {$created_at_style}>
+	{BEGIN created_at_fieldheader}
+	<b>{$label user_details created_at}</b>
+	{END created_at_fieldheader}
+</th>
+{END created_at_fieldheadercolumn}
+	{BEGIN updated_at_fieldheadercolumn}
+<th class="runner-cc {$updated_at_class}" {$updated_at_style}>
+	{BEGIN updated_at_fieldheader}
+	<b>{$label user_details updated_at}</b>
+	{END updated_at_fieldheader}
+</th>
+{END updated_at_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN user_id_fieldcolumn}
+<td  class="runner-cc {$user_id_class}" {$user_id_style} {$recordattrs}>
+	{$user_id_value}
+</td>
+{END user_id_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style} {$recordattrs}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+	{BEGIN town_id_fieldcolumn}
+<td  class="runner-cc {$town_id_class}" {$town_id_style} {$recordattrs}>
+	{$town_id_value}
+</td>
+{END town_id_fieldcolumn}
+	{BEGIN verified_fieldcolumn}
+<td  class="runner-cc {$verified_class}" {$verified_style} {$recordattrs}>
+	{$verified_value}
+</td>
+{END verified_fieldcolumn}
+	{BEGIN verified_by_fieldcolumn}
+<td  class="runner-cc {$verified_by_class}" {$verified_by_style} {$recordattrs}>
+	{$verified_by_value}
+</td>
+{END verified_by_fieldcolumn}
+	{BEGIN photo_fieldcolumn}
+<td  class="runner-cc {$photo_class}" {$photo_style} {$recordattrs}>
+	{$photo_value}
+</td>
+{END photo_fieldcolumn}
+	{BEGIN latitude_fieldcolumn}
+<td  class="runner-cc {$latitude_class}" {$latitude_style} {$recordattrs}>
+	{$latitude_value}
+</td>
+{END latitude_fieldcolumn}
+	{BEGIN longitude_fieldcolumn}
+<td  class="runner-cc {$longitude_class}" {$longitude_style} {$recordattrs}>
+	{$longitude_value}
+</td>
+{END longitude_fieldcolumn}
+	{BEGIN find_me_code_fieldcolumn}
+<td  class="runner-cc {$find_me_code_class}" {$find_me_code_style} {$recordattrs}>
+	{$find_me_code_value}
+</td>
+{END find_me_code_fieldcolumn}
+	{BEGIN created_at_fieldcolumn}
+<td  class="runner-cc {$created_at_class}" {$created_at_style} {$recordattrs}>
+	{$created_at_value}
+</td>
+{END created_at_fieldcolumn}
+	{BEGIN updated_at_fieldcolumn}
+<td  class="runner-cc {$updated_at_class}" {$updated_at_style} {$recordattrs}>
+	{$updated_at_value}
+</td>
+{END updated_at_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

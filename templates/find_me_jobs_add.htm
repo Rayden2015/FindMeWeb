@@ -1,0 +1,171 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}
+<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	<h1>{$pagetitlelabel find_me_jobs add}</h1>
+</span></div>{END addheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields {$brickclass_addfields}"><table class="fieldGrid">
+	{BEGIN job_name_fieldblock}
+<tr class="{$fielddispclass_job_name}" data-fieldname="job_name">
+	<td class="rnr-label">
+		{BEGIN job_name_label}{$label find_me_jobs job_name}{END job_name_label}
+	</td>
+	<td class="rnr-control style3">
+		{$job_name_editcontrol}&nbsp;
+	</td>
+</tr>
+{END job_name_fieldblock}
+	{BEGIN category_id_fieldblock}
+<tr class="{$fielddispclass_category_id}" data-fieldname="category_id">
+	<td class="rnr-label">
+		{BEGIN category_id_label}{$label find_me_jobs category_id}{END category_id_label}
+	</td>
+	<td class="rnr-control style3">
+		{$category_id_editcontrol}&nbsp;
+	</td>
+</tr>
+{END category_id_fieldblock}
+	{BEGIN added_by_fieldblock}
+<tr class="{$fielddispclass_added_by}" data-fieldname="added_by">
+	<td class="rnr-label">
+		{BEGIN added_by_label}{$label find_me_jobs added_by}{END added_by_label}
+	</td>
+	<td class="rnr-control style3">
+		{$added_by_editcontrol}&nbsp;
+	</td>
+</tr>
+{END added_by_fieldblock}
+	{BEGIN created_at_fieldblock}
+<tr class="{$fielddispclass_created_at}" data-fieldname="created_at">
+	<td class="rnr-label">
+		{BEGIN created_at_label}{$label find_me_jobs created_at}{END created_at_label}
+	</td>
+	<td class="rnr-control style3">
+		{$created_at_editcontrol}&nbsp;
+	</td>
+</tr>
+{END created_at_fieldblock}
+	{BEGIN updated_at_fieldblock}
+<tr class="{$fielddispclass_updated_at}" data-fieldname="updated_at">
+	<td class="rnr-label">
+		{BEGIN updated_at_label}{$label find_me_jobs updated_at}{END updated_at_label}
+	</td>
+	<td class="rnr-control style3">
+		{$updated_at_editcontrol}&nbsp;
+	</td>
+</tr>
+{END updated_at_fieldblock}
+	{BEGIN fields_fieldblock}
+<tr class="{$fielddispclass_fields}" data-fieldname="fields">
+	<td class="rnr-label">
+		{BEGIN fields_label}{$label find_me_jobs fields}{END fields_label}
+	</td>
+	<td class="rnr-control style3">
+		{$fields_editcontrol}&nbsp;
+	</td>
+</tr>
+{END fields_fieldblock}
+</table></div>
+
+
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}">{BEGIN save_button}
+<a href="#" class="rnr-button main" id="saveButton{$id}">Save</a>
+{END save_button}
+{BEGIN reset_button}
+<a href="#" class="rnr-button" id="resetButton{$id}">Reset</a>
+{END reset_button}
+{BEGIN cancel_button}
+<a href="#" class="rnr-button" id="cancelButton{$id}">Cancel</a>
+{END cancel_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" id="backButton{$id}">Back to list</a>
+{END back_button}
+{BEGIN backToMenu_button}
+<a href="#" class="rnr-button" id="backToMenuButton{$id}">Back to menu</a>
+{END backToMenu_button}</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

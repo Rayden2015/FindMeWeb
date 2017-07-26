@@ -1,0 +1,296 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel users print}</h1>
+</div>
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN user_id_fieldheadercolumn}
+<th class="runner-cc {$user_id_class}" {$user_id_style}>
+	{BEGIN user_id_fieldheader}
+	<b>{$label users user_id}</b>
+	{END user_id_fieldheader}
+</th>
+{END user_id_fieldheadercolumn}
+	{BEGIN name_fieldheadercolumn}
+<th class="runner-cc {$name_class}" {$name_style}>
+	{BEGIN name_fieldheader}
+	<b>{$label users name}</b>
+	{END name_fieldheader}
+</th>
+{END name_fieldheadercolumn}
+	{BEGIN phone_fieldheadercolumn}
+<th class="runner-cc {$phone_class}" {$phone_style}>
+	{BEGIN phone_fieldheader}
+	<b>{$label users phone}</b>
+	{END phone_fieldheader}
+</th>
+{END phone_fieldheadercolumn}
+	{BEGIN password_fieldheadercolumn}
+<th class="runner-cc {$password_class}" {$password_style}>
+	{BEGIN password_fieldheader}
+	<b>{$label users password}</b>
+	{END password_fieldheader}
+</th>
+{END password_fieldheadercolumn}
+	{BEGIN verification_code_fieldheadercolumn}
+<th class="runner-cc {$verification_code_class}" {$verification_code_style}>
+	{BEGIN verification_code_fieldheader}
+	<b>{$label users verification_code}</b>
+	{END verification_code_fieldheader}
+</th>
+{END verification_code_fieldheadercolumn}
+	{BEGIN phone_verified_fieldheadercolumn}
+<th class="runner-cc {$phone_verified_class}" {$phone_verified_style}>
+	{BEGIN phone_verified_fieldheader}
+	<b>{$label users phone_verified}</b>
+	{END phone_verified_fieldheader}
+</th>
+{END phone_verified_fieldheadercolumn}
+	{BEGIN active_fieldheadercolumn}
+<th class="runner-cc {$active_class}" {$active_style}>
+	{BEGIN active_fieldheader}
+	<b>{$label users active}</b>
+	{END active_fieldheader}
+</th>
+{END active_fieldheadercolumn}
+	{BEGIN added_by_fieldheadercolumn}
+<th class="runner-cc {$added_by_class}" {$added_by_style}>
+	{BEGIN added_by_fieldheader}
+	<b>{$label users added_by}</b>
+	{END added_by_fieldheader}
+</th>
+{END added_by_fieldheadercolumn}
+	{BEGIN type_id_fieldheadercolumn}
+<th class="runner-cc {$type_id_class}" {$type_id_style}>
+	{BEGIN type_id_fieldheader}
+	<b>{$label users type_id}</b>
+	{END type_id_fieldheader}
+</th>
+{END type_id_fieldheadercolumn}
+	{BEGIN remember_token_fieldheadercolumn}
+<th class="runner-cc {$remember_token_class}" {$remember_token_style}>
+	{BEGIN remember_token_fieldheader}
+	<b>{$label users remember_token}</b>
+	{END remember_token_fieldheader}
+</th>
+{END remember_token_fieldheadercolumn}
+	{BEGIN created_at_fieldheadercolumn}
+<th class="runner-cc {$created_at_class}" {$created_at_style}>
+	{BEGIN created_at_fieldheader}
+	<b>{$label users created_at}</b>
+	{END created_at_fieldheader}
+</th>
+{END created_at_fieldheadercolumn}
+	{BEGIN updated_at_fieldheadercolumn}
+<th class="runner-cc {$updated_at_class}" {$updated_at_style}>
+	{BEGIN updated_at_fieldheader}
+	<b>{$label users updated_at}</b>
+	{END updated_at_fieldheader}
+</th>
+{END updated_at_fieldheadercolumn}
+	{BEGIN identifier_fieldheadercolumn}
+<th class="runner-cc {$identifier_class}" {$identifier_style}>
+	{BEGIN identifier_fieldheader}
+	<b>{$label users identifier}</b>
+	{END identifier_fieldheader}
+</th>
+{END identifier_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN user_id_fieldcolumn}
+<td  class="runner-cc {$user_id_class}" {$user_id_style} {$recordattrs}>
+	{$user_id_value}
+</td>
+{END user_id_fieldcolumn}
+	{BEGIN name_fieldcolumn}
+<td  class="runner-cc {$name_class}" {$name_style} {$recordattrs}>
+	{$name_value}
+</td>
+{END name_fieldcolumn}
+	{BEGIN phone_fieldcolumn}
+<td  class="runner-cc {$phone_class}" {$phone_style} {$recordattrs}>
+	{$phone_value}
+</td>
+{END phone_fieldcolumn}
+	{BEGIN password_fieldcolumn}
+<td  class="runner-cc {$password_class}" {$password_style} {$recordattrs}>
+	{$password_value}
+</td>
+{END password_fieldcolumn}
+	{BEGIN verification_code_fieldcolumn}
+<td  class="runner-cc {$verification_code_class}" {$verification_code_style} {$recordattrs}>
+	{$verification_code_value}
+</td>
+{END verification_code_fieldcolumn}
+	{BEGIN phone_verified_fieldcolumn}
+<td  class="runner-cc {$phone_verified_class}" {$phone_verified_style} {$recordattrs}>
+	{$phone_verified_value}
+</td>
+{END phone_verified_fieldcolumn}
+	{BEGIN active_fieldcolumn}
+<td  class="runner-cc {$active_class}" {$active_style} {$recordattrs}>
+	{$active_value}
+</td>
+{END active_fieldcolumn}
+	{BEGIN added_by_fieldcolumn}
+<td  class="runner-cc {$added_by_class}" {$added_by_style} {$recordattrs}>
+	{$added_by_value}
+</td>
+{END added_by_fieldcolumn}
+	{BEGIN type_id_fieldcolumn}
+<td  class="runner-cc {$type_id_class}" {$type_id_style} {$recordattrs}>
+	{$type_id_value}
+</td>
+{END type_id_fieldcolumn}
+	{BEGIN remember_token_fieldcolumn}
+<td  class="runner-cc {$remember_token_class}" {$remember_token_style} {$recordattrs}>
+	{$remember_token_value}
+</td>
+{END remember_token_fieldcolumn}
+	{BEGIN created_at_fieldcolumn}
+<td  class="runner-cc {$created_at_class}" {$created_at_style} {$recordattrs}>
+	{$created_at_value}
+</td>
+{END created_at_fieldcolumn}
+	{BEGIN updated_at_fieldcolumn}
+<td  class="runner-cc {$updated_at_class}" {$updated_at_style} {$recordattrs}>
+	{$updated_at_value}
+</td>
+{END updated_at_fieldcolumn}
+	{BEGIN identifier_fieldcolumn}
+<td  class="runner-cc {$identifier_class}" {$identifier_style} {$recordattrs}>
+	{$identifier_value}
+</td>
+{END identifier_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

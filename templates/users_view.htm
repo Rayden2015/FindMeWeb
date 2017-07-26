@@ -1,0 +1,255 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_main} rnr-wrapper rnr-cbw-main">
+
+{BEGIN container_main}
+<div class="rnr-c rnr-cv rnr-c-main">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel users view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields {$brickclass_viewfields}"><table class="fieldGrid">
+	{BEGIN user_id_fieldblock}
+<tr class="{$fielddispclass_user_id}" data-fieldname="user_id">
+	<td class="rnr-label">
+		{$label users user_id}
+	</td>
+	<td class="rnr-control style3">
+		{$user_id_value}&nbsp;
+	</td>
+</tr>
+{END user_id_fieldblock}
+	{BEGIN name_fieldblock}
+<tr class="{$fielddispclass_name}" data-fieldname="name">
+	<td class="rnr-label">
+		{$label users name}
+	</td>
+	<td class="rnr-control style3">
+		{$name_value}&nbsp;
+	</td>
+</tr>
+{END name_fieldblock}
+	{BEGIN phone_fieldblock}
+<tr class="{$fielddispclass_phone}" data-fieldname="phone">
+	<td class="rnr-label">
+		{$label users phone}
+	</td>
+	<td class="rnr-control style3">
+		{$phone_value}&nbsp;
+	</td>
+</tr>
+{END phone_fieldblock}
+	{BEGIN password_fieldblock}
+<tr class="{$fielddispclass_password}" data-fieldname="password">
+	<td class="rnr-label">
+		{$label users password}
+	</td>
+	<td class="rnr-control style3">
+		{$password_value}&nbsp;
+	</td>
+</tr>
+{END password_fieldblock}
+	{BEGIN verification_code_fieldblock}
+<tr class="{$fielddispclass_verification_code}" data-fieldname="verification_code">
+	<td class="rnr-label">
+		{$label users verification_code}
+	</td>
+	<td class="rnr-control style3">
+		{$verification_code_value}&nbsp;
+	</td>
+</tr>
+{END verification_code_fieldblock}
+	{BEGIN phone_verified_fieldblock}
+<tr class="{$fielddispclass_phone_verified}" data-fieldname="phone_verified">
+	<td class="rnr-label">
+		{$label users phone_verified}
+	</td>
+	<td class="rnr-control style3">
+		{$phone_verified_value}&nbsp;
+	</td>
+</tr>
+{END phone_verified_fieldblock}
+	{BEGIN active_fieldblock}
+<tr class="{$fielddispclass_active}" data-fieldname="active">
+	<td class="rnr-label">
+		{$label users active}
+	</td>
+	<td class="rnr-control style3">
+		{$active_value}&nbsp;
+	</td>
+</tr>
+{END active_fieldblock}
+	{BEGIN added_by_fieldblock}
+<tr class="{$fielddispclass_added_by}" data-fieldname="added_by">
+	<td class="rnr-label">
+		{$label users added_by}
+	</td>
+	<td class="rnr-control style3">
+		{$added_by_value}&nbsp;
+	</td>
+</tr>
+{END added_by_fieldblock}
+	{BEGIN type_id_fieldblock}
+<tr class="{$fielddispclass_type_id}" data-fieldname="type_id">
+	<td class="rnr-label">
+		{$label users type_id}
+	</td>
+	<td class="rnr-control style3">
+		{$type_id_value}&nbsp;
+	</td>
+</tr>
+{END type_id_fieldblock}
+	{BEGIN remember_token_fieldblock}
+<tr class="{$fielddispclass_remember_token}" data-fieldname="remember_token">
+	<td class="rnr-label">
+		{$label users remember_token}
+	</td>
+	<td class="rnr-control style3">
+		{$remember_token_value}&nbsp;
+	</td>
+</tr>
+{END remember_token_fieldblock}
+	{BEGIN created_at_fieldblock}
+<tr class="{$fielddispclass_created_at}" data-fieldname="created_at">
+	<td class="rnr-label">
+		{$label users created_at}
+	</td>
+	<td class="rnr-control style3">
+		{$created_at_value}&nbsp;
+	</td>
+</tr>
+{END created_at_fieldblock}
+	{BEGIN updated_at_fieldblock}
+<tr class="{$fielddispclass_updated_at}" data-fieldname="updated_at">
+	<td class="rnr-label">
+		{$label users updated_at}
+	</td>
+	<td class="rnr-control style3">
+		{$updated_at_value}&nbsp;
+	</td>
+</tr>
+{END updated_at_fieldblock}
+	{BEGIN identifier_fieldblock}
+<tr class="{$fielddispclass_identifier}" data-fieldname="identifier">
+	<td class="rnr-label">
+		{$label users identifier}
+	</td>
+	<td class="rnr-control style3">
+		{$identifier_value}&nbsp;
+	</td>
+</tr>
+{END identifier_fieldblock}
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+</div>
+{END container_main}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>
